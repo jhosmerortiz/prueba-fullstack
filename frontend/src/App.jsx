@@ -14,6 +14,7 @@ import {
   Sparkles,
   Boxes,
 } from "lucide-react";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8080/api";
 
 const moneda = (numero) =>
   new Intl.NumberFormat("es-PE", {
@@ -430,7 +431,7 @@ function App() {
   const [comprobandoRol, setComprobandoRol] = useState(true);
 
   async function recargarProductos() {
-    const respuesta = await fetch("http://localhost:8080/api/productos");
+    const respuesta = await fetch("`${API}/productos`");
     if (!respuesta.ok) throw new Error("No se pudo actualizar el catálogo");
     const datos = await respuesta.json();
     setProductos(datos.map((p) => ({ ...p, imagen: p.imagenUrl })));
@@ -440,7 +441,7 @@ function App() {
     const controller = new AbortController();
     async function cargarProductos() {
       try {
-        const respuesta = await fetch("http://localhost:8080/api/productos", {
+        const respuesta = await fetch("`${API}/productos`", {
           signal: controller.signal,
         });
         if (!respuesta.ok) throw new Error(`Error HTTP: ${respuesta.status}`);

@@ -18,7 +18,7 @@ import {
   eliminarImagenTemporal,
 } from "../lib/imagenes";
 
-const API = "http://localhost:8080/api";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8080/api";
 
 const formularioVacio = {
   nombre: "",
