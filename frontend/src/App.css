@@ -1,0 +1,177 @@
+
+.app {
+  min-height: 100vh;
+  background: #f7f9fc;
+}
+
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  color: #172554;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+}
+
+nav button {
+  background: transparent;
+  border: 0;
+  padding: 11px 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #475569;
+  font-weight: 600;
+}
+
+nav button.activo {
+  background: #2563eb;
+  color: white;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+  padding: 55px 24px;
+}
+
+.encabezado {
+  margin-bottom: 30px;
+}
+
+.etiqueta {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  color: #0f172a;
+  font-size: clamp(27px, 4vw, 38px);
+  margin: 12px 0;
+}
+
+.encabezado > p:last-child,
+.descripcion {
+  color: #64748b;
+}
+
+.buscador {
+  width: 100%;
+  max-width: 440px;
+  padding: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background: white;
+  font-size: 15px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.producto {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+}
+
+.producto-imagen {
+  height: 180px;
+  background: #eaf1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+}
+
+.producto-info {
+  padding: 20px;
+}
+
+.producto-info span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.producto-info h3 {
+  margin: 10px 0;
+  color: #1e293b;
+}
+
+.producto-info strong {
+  color: #2563eb;
+  font-size: 20px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .contenedor {
+    padding: 30px 16px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
